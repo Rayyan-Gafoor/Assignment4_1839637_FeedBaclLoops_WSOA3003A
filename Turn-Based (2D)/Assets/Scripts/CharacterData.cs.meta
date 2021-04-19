@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: af089d0ef93c0254788adf373bf6a4b0
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - projectile: {instanceID: 0}
+  - startPoint: {instanceID: 0}
+  - particle_Effect_Aether: {instanceID: 0}
+  - particle_Effect_Necro: {instanceID: 0}
+  - particle_Effect_Pyro: {instanceID: 0}
+  - particle_Effect_Hydro: {instanceID: 0}
+  - particle_Effect_Aero: {instanceID: 0}
+  - particle_Effect_Electro: {instanceID: 0}
+  - particle_Effect_Dendro: {instanceID: 0}
+  - particle_Effect_Cryo: {instanceID: 0}
+  - particle_Effect_Geo: {instanceID: 0}
+  - particle_Effect_PlayerRage: {instanceID: 0}
+  - EnemyDeath: {instanceID: 0}
+  - PlayerDeath: {instanceID: 0}
+  - EffectObj: {fileID: 876943733517861539, guid: 81572a1d08a31f248862444060069db0, type: 3}
+  - effectChanger: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
