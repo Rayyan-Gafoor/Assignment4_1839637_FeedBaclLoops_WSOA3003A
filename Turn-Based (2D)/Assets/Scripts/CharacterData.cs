@@ -55,7 +55,8 @@ public class CharacterData : MonoBehaviour
     public GameObject EffectObj;
     public emissionRate effectChanger;
 
-    
+    ////
+    ///
    
     /// //////////////////////////////////////////
    

@@ -3,7 +3,31 @@ guid: d8695fcdc7f78b84eafe9c528853513c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Player: {instanceID: 0}
+  - Enemy: {instanceID: 0}
+  - PlayerBattleStation: {instanceID: 0}
+  - EnemyBattleStation: {instanceID: 0}
+  - dialogueText: {instanceID: 0}
+  - BuffText: {instanceID: 0}
+  - BuffApplied: {instanceID: 0}
+  - PlayerCharacterName: {instanceID: 0}
+  - PlayerCharacterStats: {instanceID: 0}
+  - PlayerCharacterInfo: {instanceID: 0}
+  - EnemyCharacterName: {instanceID: 0}
+  - EnemyCharacterStats: {instanceID: 0}
+  - EnemyCharacterInfo: {instanceID: 0}
+  - Camera: {instanceID: 0}
+  - HintText: {instanceID: 0}
+  - StunB: {instanceID: 0}
+  - HealB: {instanceID: 0}
+  - SpecialB: {instanceID: 0}
+  - BuffB: {instanceID: 0}
+  - BuffStats: {instanceID: 0}
+  - SoundSource1: {instanceID: 0}
+  - DeepSoundTrack: {fileID: 8300000, guid: 5e154720fc2e1bf47afe3467ff6c17fa, type: 3}
+  - SoundSource2: {instanceID: 0}
+  - SoftSoundTrack: {fileID: 8300000, guid: dfc17b8393d0f6745bb4627987abfde1, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

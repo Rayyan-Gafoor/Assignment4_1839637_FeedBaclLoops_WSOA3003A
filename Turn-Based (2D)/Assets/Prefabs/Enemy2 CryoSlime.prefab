@@ -97,8 +97,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Cryo Slime
-  Level: 20
-  Attack: 20
+  Level: 22
+  Attack: 17
   Defence: 12
   Health: 100
   CurrentHealth: 100

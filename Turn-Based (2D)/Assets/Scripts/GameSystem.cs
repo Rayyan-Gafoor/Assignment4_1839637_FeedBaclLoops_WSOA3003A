@@ -56,7 +56,11 @@ public class GameSystem : MonoBehaviour
     public float RoundFlag = 0;
     float action = 0;
 
-
+    // sound code
+    public AudioSource SoundSource1;
+    public AudioClip DeepSoundTrack;
+    public AudioSource SoundSource2;
+    public AudioClip SoftSoundTrack;
 
     // Start is called before the first frame update
     void Start()
@@ -73,12 +77,14 @@ public class GameSystem : MonoBehaviour
         }
         State = GameStates.Start;
         StartCoroutine(BattleSetUp());
-       
+        //sound code
+        //SoundSource1 = GetComponent<AudioSource>();
 
 
     }
     void Update()
     {
+        //PlaySound();
         //This is a simple way of adding color
 
         //This is a more specific way of adding color
@@ -294,6 +300,7 @@ public class GameSystem : MonoBehaviour
     //Player Turn State
     void PlayerTurn()
     {
+        PlaySound();
 
         if (RoundFlag==0)
         {
@@ -386,6 +393,7 @@ public class GameSystem : MonoBehaviour
     //Enemy Turn State...
     IEnumerator EnemyTurn()
     {
+        PlaySound();
         if (RoundFlag == 0)
         {
             dialogueText.text = EnemyData.Name + " Attacks " + PlayerData.Name;
@@ -426,6 +434,7 @@ public class GameSystem : MonoBehaviour
                 bool isDead = PlayerData.EnemyAttacks(EnemyData.Attack);
                 PlayerCharacterStats.text = "ATT:" + PlayerData.Attack + "  DEF:" + PlayerData.Defence + "  Health:" + PlayerData.CurrentHealth + "/" + PlayerData.Health + " ENG:" + PlayerData.current_ENG + "/" + PlayerData.ENG + " INT:" + PlayerData.INT;
                 PlayerData.SpriteChange();
+                PlaySound();
                 yield return new WaitForSeconds(1f);
 
                 if (isDead)
@@ -454,6 +463,7 @@ public class GameSystem : MonoBehaviour
                 bool isDead = PlayerData.EnemyAttacks(EnemyData.Attack);
                 PlayerCharacterStats.text = "ATT:" + PlayerData.Attack + "  DEF:" + PlayerData.Defence + "  Health:" + PlayerData.CurrentHealth + "/" + PlayerData.Health + " ENG:" + PlayerData.current_ENG + "/" + PlayerData.ENG + " INT:" + PlayerData.INT;
                 PlayerData.SpriteChange();
+                PlaySound();
                 yield return new WaitForSeconds(1f);
 
                 if (isDead)
@@ -485,6 +495,7 @@ public class GameSystem : MonoBehaviour
                     dialogueText.text = PlayerData.Name + " is Stunned ";
                     PlayerData.ParticleEffect_Geo();
                     PlayerData.SpriteChange();
+                    PlaySound();
                     yield return new WaitForSeconds(3f);
                    // TutFlag = TutFlag + 1;
                     State = GameStates.EnemyTurn;
@@ -530,6 +541,7 @@ public class GameSystem : MonoBehaviour
                 PlayerCharacterStats.text = "ATT:" + PlayerData.Attack + "  DEF:" + PlayerData.Defence + "  Health:" + PlayerData.CurrentHealth + "/" + PlayerData.Health + " ENG:" + PlayerData.current_ENG + "/" + PlayerData.ENG + " INT:" + PlayerData.INT;
                 EnemyCharacterStats.text = "ATT:" + EnemyData.Attack + "  DEF:" + EnemyData.Defence + "  Health:" + EnemyData.CurrentHealth + "/" + EnemyData.Health + " ENG:" + EnemyData.current_ENG + "/" + EnemyData.ENG + " INT:" + EnemyData.INT;
                 PlayerData.SpriteChange();
+                PlaySound();
                 dialogueText.text = EnemyData.Name + " used Special Attack on " + PlayerData.Name;
                 Debug.Log("enemy used special attacked");
 
@@ -592,7 +604,7 @@ public class GameSystem : MonoBehaviour
         Buff = "Aether Buff";
         BuffText.text = Buff + " Is Active";
         // StartCoroutine(PlayerStun());
-    }
+    } 
     public void OnNecroBuff()
     {
 
@@ -681,6 +693,47 @@ public class GameSystem : MonoBehaviour
         Buff = "Geo Buff";
         BuffText.text = Buff + " Is Active";
         // StartCoroutine(PlayerStun());
+    }
+    void PlaySound()
+    {
+        Debug.Log("sound attempt");
+        if (PlayerData.CurrentHealth < PlayerData.Health )
+        {
+            SoundSource1.volume = 0;
+            Debug.Log("sound at 0");
+            
+        }
+        if (PlayerData.CurrentHealth < PlayerData.Health * 0.9f)
+        {
+            SoundSource1.volume = 0.02f;
+            Debug.Log("sound at 0.2");
+            
+        }
+        if (PlayerData.CurrentHealth < PlayerData.Health * 0.8f)
+        {
+            SoundSource1.volume = 0.05f;
+            Debug.Log("sound at 0.3");
+            
+        }
+        if (PlayerData.CurrentHealth < PlayerData.Health * 0.7f)
+        {
+            SoundSource1.volume = 0.1f;
+            Debug.Log("sound at 0.35");
+            
+        }
+        if (PlayerData.CurrentHealth < PlayerData.Health * 0.6f)
+        {
+            SoundSource1.volume = 0.5f;
+            Debug.Log("sound at 0.5");
+            
+        }
+        if (PlayerData.CurrentHealth < PlayerData.Health * 0.5f)
+        {
+            SoundSource1.volume = 1;
+            Debug.Log("sound at 1");
+        }
+        return;
+        
     }
    
 }
