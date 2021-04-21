@@ -156,7 +156,7 @@ MonoBehaviour:
   EnemyDeath: {fileID: 238703852080360133, guid: b59e6ae836baad14cb0f31561fe68886, type: 3}
   PlayerDeath: {fileID: 0}
   Element: 0
-  EffectObj: {fileID: 0}
+  EffectObj: {fileID: 876943733517861539, guid: 81572a1d08a31f248862444060069db0, type: 3}
   effectChanger: {fileID: 0}
 --- !u!61 &6244289929039567701
 BoxCollider2D:

@@ -576,7 +576,7 @@ public class GameSystem : MonoBehaviour
             {
                 elapse += Time.deltaTime;
             }
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
 
 
         }
@@ -588,8 +588,14 @@ public class GameSystem : MonoBehaviour
             {
                 elapse += Time.deltaTime;
             }
-            
-            StartCoroutine(BattleSetUp());
+
+            //StartCoroutine(BattleSetUp());
+           
+         
+                SceneManager.LoadScene(0);
+           
+               
+
         }
         
     }

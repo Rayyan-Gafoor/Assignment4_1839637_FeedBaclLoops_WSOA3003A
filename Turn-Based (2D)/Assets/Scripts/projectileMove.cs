@@ -12,7 +12,7 @@ public class projectileMove : MonoBehaviour
 
     public void Update()
     {
-        transform.position = Vector3.Lerp(transform.position, target.position, 0.02f);
+        transform.position = Vector3.Lerp(transform.position, target.position, 0.05f);
         Destroy(gameObject, lifetime);
     }
     /*private void OnCollisionEnter2D(Collision2D collision)
